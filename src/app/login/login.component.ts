@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NotificationService} from '../notification.service'
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,10 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  register(){
+    console.log("register");
   }
 
 }

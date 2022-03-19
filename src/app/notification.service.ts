@@ -1,0 +1,30 @@
+import {Injectable, NgZone} from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class NotificationService {
+
+  constructor(public snackBar: MatSnackBar,
+              private zone: NgZone) {}
+
+  public showNotif(message: string, action = 'error', duration = 4000): void {
+    this.snackBar.open(message, action, { duration }).onAction().subscribe(() => {
+      console.log('Notififcation action performed');
+    });
+  }
+
+
+  public notImplementedWarning(message: string, duration = 4000): void {
+
+    // @ts-ignore
+    this.snackBar.open(`"${message}" is not implemented`, 'error', { duration }).onAction().subscribe(() => {
+    });
+  }
+
+
+
+}
+
