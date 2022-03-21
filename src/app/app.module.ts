@@ -9,21 +9,27 @@ import { RegisterComponent } from './register/register.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatIconModule} from '@angular/material/icon'
+import {MatListModule} from "@angular/material/list";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatToolbarModule} from "@angular/material/toolbar";
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatIconModule
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatListModule,
+        MatGridListModule,
+        MatToolbarModule
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
